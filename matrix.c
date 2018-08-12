@@ -24,6 +24,7 @@
 void AddMatrices()
 {
     int i ,j,r,c,a[][],b[][],c[][];
+    scanf("%d%d",&r,&c);
     ReadMatrix(r,c,a);
     ReadMatrix(r,c,b);
     for(i=0;i<r;i++)
