@@ -11,7 +11,6 @@
     What if the same header file is included twice?
     Do reply your answers by commenting on our post @ proclub.codeingzone.in or drop us a mail at proclubvnit@gmail.com
 */
-//MAKE CHANGES
 #define ADDITION 1
 #define SUBTRACTION 2
 #define MULTIPLICATION 3
@@ -66,6 +65,25 @@ void MultMatrices()
    }
     
 }
+void multiplyconstant()
+{
+    int r1,c1;
+//first matrix
+   scanf("%d %d",&r1,&c1);
+   int a[r1][c1];
+   ReadMatrix(r1,c1,a);
+  int k,i,j;
+    scanf("%d",&k);
+    for(i=0;i<r1;i++)
+    {
+        for(j=0;j<c1;j++)
+        {
+            a[r1][c1]=a[r1][c1]*k;
+        }
+    }
+         PrintMatrix(r1,c2,d);
+
+}
 
 int main(){
     //Driver Code-Do not make changes here unless too necessary
@@ -98,6 +116,9 @@ int main(){
                             break;
             case POWER:
                             Power();//ask not only for matrix but also the power to which it should be raised
+                            break;
+            case CONSTANT MULT:
+                            multiplyconstant();
                             break;
         }
 
