@@ -28,6 +28,7 @@ void PrintMatrix(int r,int c,int Matrix[][c])
      {printf("%d ",Matrix[i][j]);
       } 
       printf("\n");
+    printf("Matrix is printed");
     }
     
 }
@@ -36,6 +37,7 @@ void ReadMatrix(int r,int c,int Matrix[][c])
    for(i=0;i<r;i++)
    {for(j=0;j<c;j++)
      {scanf("%d",&Matrix[i][j]);
+      pr
       } 
     }
  }
@@ -66,7 +68,24 @@ void MultMatrices()
    }
     
 }
-
+void AddMatrices()
+{
+int r1,c1,i,j;
+//first matrix
+   scanf("%d %d",&r1,&c1);
+   int a[r1][c1];
+   ReadMatrix(r1,c1,a);   
+//second matrix
+   int b[r1][c1];
+   ReadMatrix(r1,c1,b);
+   for(i=0;i<r1;i++)
+   {
+       for(j=0;j<c1;j++)
+       {
+           
+       }
+   }  
+}
 int main(){
     //Driver Code-Do not make changes here unless too necessary
     int option,num;
