@@ -66,9 +66,20 @@ void MultMatrices()
    }
     
 }
-
+void Transpose()
+{int r1,c1,i,j;
+  scanf("%d %d",&r1,&c1);
+    int a[r1][c1];
+   ReadMatrix(r1,c1,a);
+    int b[c1][r1];
+    for(i=0;i<c1;i++)
+    {for(j=0;j<r1;j++)
+      b[i][j]=a[j][i];
+    }
+  PrintMatrix(c1,r1,b);
+}
 int main(){
-    //Driver Code-Do not make changes here unless too necessary
+    //Driver Code Do not make changes here unless too necessary
     int option,num;
     printf("Enter the number of choices\n");
     scanf("%d",&num);
