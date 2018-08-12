@@ -11,7 +11,6 @@
     What if the same header file is included twice?
     Do reply your answers by commenting on our post @ proclub.codeingzone.in or drop us a mail at proclubvnit@gmail.com
 */
-//MAKE CHANGES
 #define ADDITION 1
 #define SUBTRACTION 2
 #define MULTIPLICATION 3
@@ -30,6 +29,33 @@ void PrintMatrix(int r,int c,int Matrix[][c])
       printf("\n");
     }
     
+}
+void Addmatrices()
+{
+    int r1,r2,c1,c2;
+     scanf("%d %d",&r1,&c1);
+   int a[r1][c1];
+   ReadMatrix(r1,c1,a);
+  //second matrix
+  scanf("%d %d",&r2,&c2);
+   int b[r2][c2];
+   ReadMatrix(r2,c2,b);
+    if((r1==r2)&&(c1==c2))
+    {
+        int c[r1][c1];
+        for(i=0;i<r1;i++)
+        {
+            for(j=0;j<c1;j++)
+            {
+                c[[i][j]=a[i][j]+b[i][j];
+                  } 
+                  }
+               
+    }
+                  else
+                  {
+                      printf("Can't be added");
+                  }
 }
 void ReadMatrix(int r,int c,int Matrix[][c])
 {  int i,j;
