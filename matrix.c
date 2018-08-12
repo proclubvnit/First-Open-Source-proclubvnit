@@ -5,12 +5,7 @@
 #include <limits.h>
 #include <time.h>
 #include <assert.h>
-/*
-    What is a header file?
-    What is its purpose?
-    What if the same header file is included twice?
-    Do reply your answers by commenting on our post @ proclub.codeingzone.in or drop us a mail at proclubvnit@gmail.com
-*/
+
 //MAKE CHANGES
 #define ADDITION 1
 #define SUBTRACTION 2
