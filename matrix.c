@@ -8,10 +8,9 @@
 /*
     What is a header file?
     What is its purpose?
-    What if the same header file is included twice?
+    What if the same header file is included twice? Program dies
     Do reply your answers by commenting on our post @ proclub.codeingzone.in or drop us a mail at proclubvnit@gmail.com
 */
-//MAKE CHANGES
 #define ADDITION 1
 #define SUBTRACTION 2
 #define MULTIPLICATION 3
@@ -19,6 +18,7 @@
 #define TRACE 5
 #define DETERMINANT 6
 #define POWER 7
+#define PRINT 8
 #define ROWS 100
 #define COLS 100
 void PrintMatrix(int r,int c,int Matrix[][c])
@@ -39,6 +39,13 @@ void ReadMatrix(int r,int c,int Matrix[][c])
       } 
     }
  }
+void Print()
+{  int r1,c1,r2,c2;
+   scanf("%d %d",&r1,&c1);
+   int a[r1][c1];
+   ReadMatrix(r1,c1,a);
+   PrintMatrix(r1,c1,a);
+}
 void MultMatrices()
 {  int r1,c1,r2,c2;
 //first matrix
@@ -59,6 +66,60 @@ void MultMatrices()
         { d[i][j]=0;
          for(k=0;k<c1;k++)
          {d[i][j]+=a[i][k]*b[k][j];
+         }
+        } 
+     }
+     PrintMatrix(r1,c2,d);
+   }
+    
+}
+void AddMatrices()
+{  int r1,c1,r2,c2;
+//first matrix
+   scanf("%d %d",&r1,&c1);
+   int a[r1][c1];
+   ReadMatrix(r1,c1,a);
+  //second matrix
+  scanf("%d %d",&r2,&c2);
+   int b[r2][c2];
+   ReadMatrix(r2,c2,b);
+   if(c1!=c2||r1!=r2)
+   printf("matrix addition not possible");
+   else
+   {int i,j,k;
+    int d[r1][c2];
+     for(i=0;i<r1;i++)
+     {for(j=0;j<c2;j++)
+        { d[i][j]=0;
+         for(k=0;k<c1;k++)
+         {d[i][j]+=a[i][k]+b[k][j];
+         }
+        } 
+     }
+     PrintMatrix(r1,c2,d);
+   }
+    
+}
+void SubMatrices()
+{  int r1,c1,r2,c2;
+//first matrix
+   scanf("%d %d",&r1,&c1);
+   int a[r1][c1];
+   ReadMatrix(r1,c1,a);
+  //second matrix
+  scanf("%d %d",&r2,&c2);
+   int b[r2][c2];
+   ReadMatrix(r2,c2,b);
+   if(c1!=c2||r1!=r2)
+   printf("matrix subtraction not possible");
+   else
+   {int i,j,k;
+    int d[r1][c2];
+     for(i=0;i<r1;i++)
+     {for(j=0;j<c2;j++)
+        { d[i][j]=0;
+         for(k=0;k<c1;k++)
+         {d[i][j]+=a[i][k]+b[k][j];
          }
         } 
      }
@@ -99,6 +160,10 @@ int main(){
             case POWER:
                             Power();//ask not only for matrix but also the power to which it should be raised
                             break;
+            case PRINT:
+                            Print();
+                            break;
+            
         }
 
 
