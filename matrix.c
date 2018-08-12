@@ -21,6 +21,20 @@
 #define POWER 7
 #define ROWS 100
 #define COLS 100
+void AddMatrices()
+{
+    int i ,j,r,c,a[][],b[][],c[][];
+    ReadMatrix(r,c,a);
+    ReadMatrix(r,c,b);
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            c[i][j]=a[i][j]+b[i][j];
+        }
+    }
+    PrintMatrix(int r,int c,int c[][])        
+}
 void PrintMatrix(int r,int c,int Matrix[][c])
 { int i,j;
   for(i=0;i<r;i++)
