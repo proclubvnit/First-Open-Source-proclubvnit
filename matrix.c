@@ -31,6 +31,7 @@ void PrintMatrix(int r,int c,int Matrix[][c])
     }
     
 }
+//
 void ReadMatrix(int r,int c,int Matrix[][c])
 {  int i,j;
    for(i=0;i<r;i++)
