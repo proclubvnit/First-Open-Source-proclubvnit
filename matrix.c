@@ -11,7 +11,6 @@
     What if the same header file is included twice?
     Do reply your answers by commenting on our post @ proclub.codeingzone.in or drop us a mail at proclubvnit@gmail.com
 */
-//MAKE CHANGES
 #define ADDITION 1
 #define SUBTRACTION 2
 #define MULTIPLICATION 3
@@ -66,10 +65,27 @@ void MultMatrices()
    }
     
 }
+void Transpose(int Matrix[r][c],x)
+{
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            Matrix[i][j]*=x;
+        }
+    }
+    for(i=0;i<r;i++)
+    {
+        for(j=0;j<c;j++)
+        {
+            printf("Matrix[%d][%d]\n".i,j);
+        }
+    }
+    
 
 int main(){
     //Driver Code-Do not make changes here unless too necessary
-    int option,num;
+    int option,num,x;
     printf("Enter the number of choices\n");
     scanf("%d",&num);
     while(num--)
